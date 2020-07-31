@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table task</title>
+    <style>
+            body {
+            display: grid;
+            min-height: 100vh;
+            justify-items: center;
+        }
+        .wrapper {
+            border-bottom: 3px solid gray;
+            padding: 20px 0;
+        }
+        table {
+            min-width: 100%;
+        }
+        .pagination-block {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pagination-button {
+            background: black;
+            padding: 7px;
+            margin: 0 5px;
+            color: white;
+        }
+        .active {
+            background: red;
+        }
+        .th-sort-asc:after {
+            content: "  \25be";
+        }
+        .th-sort-desc:after {
+            content: "  \25b4"
+        }
+        .selected {
+            display: none;
+            width: 100%;
+            margin-top: 100px;
+            border: 1px solid black;
+        }
+        tr {
+            cursor: pointer;
+        }
+        tr:nth-child(even) {background: whitesmoke}
+    </style>
+</head>
+<body>
+    <div>
+        <div id="tables"></div>
+        <button id='add-table'>Add new table</button>
+        <script src="table.js"></script>
+    </div>
+</body>
+</html>
